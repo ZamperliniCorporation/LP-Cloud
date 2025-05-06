@@ -24,13 +24,16 @@ export default function Footer() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} className="flex space-x-4">
-            <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <Link href="https://www.instagram.com/hyworkoficial/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <Instagram className="h-5 w-5 text-gray-500 dark:text-gray-400 hover:text-hywork-blue dark:hover:text-blue-400 transition-colors" />
             </Link>
-            <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Twitter className="h-5 w-5 text-gray-500 dark:text-gray-400 hover:text-hywork-blue dark:hover:text-blue-400 transition-colors" />
-            </Link>
-            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+
+            <Link
+              href="https://www.linkedin.com/company/intranethywork/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
               <Linkedin className="h-5 w-5 text-gray-500 dark:text-gray-400 hover:text-hywork-blue dark:hover:text-blue-400 transition-colors" />
             </Link>
           </motion.div>
