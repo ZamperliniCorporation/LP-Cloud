@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Typewriter } from "./ui/typewriter";
 import { useRef } from "react";
 import { useLanguage } from "@/i18n/language-context";
+import ScrollDownIndicator from "./scroll-down-indicator";
 
 export default function HeroSection() {
   const ref = useRef(null);
@@ -26,7 +27,7 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 1 }}
         className="relative hidden md:block md:absolute right-0 bottom-0"
       >
-        <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 1.2 }}>
+        <motion.div style={{ opacity, y }}>
           <Image src="./hero.png" alt="HyWork Platform Interface" width={800} height={800} className="rounded-tl-3xl shadow-xl" />
         </motion.div>
       </motion.div>
@@ -63,31 +64,6 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
         </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 3.5, duration: 1 }}
-        style={{ opacity: useTransform(scrollYProgress, [0, 0.2], [1, 0]) }}
-      >
-        <p className="text-sm mb-2">{t("hero.scrollText")}</p>
-        <motion.div
-          animate={{
-            y: [0, 10, 0],
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Number.POSITIVE_INFINITY,
-            repeatType: "loop",
-          }}
-          className="w-6 h-6 flex items-center justify-center"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-          </svg>
-        </motion.div>
       </motion.div>
     </section>
   );

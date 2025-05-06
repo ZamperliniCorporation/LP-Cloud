@@ -65,7 +65,7 @@ export default function PricingSection() {
             >
               <div
                 className={`h-full ${
-                  plan.name === t("pricing.enterprise.name") ? "bg-primary text-white" : "bg-white text-black"
+                  plan.name === t("pricing.enterprise.name") ? "bg-[#104a74] dark:bg-[#1a6ca0] text-white" : "bg-white text-black"
                 } rounded-lg border-0 shadow-lg p-6`}
               >
                 <div className="mb-4">

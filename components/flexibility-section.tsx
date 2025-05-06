@@ -26,13 +26,7 @@ export default function FlexibilitySection() {
               }}
               transition={{ duration: 0.3 }}
             >
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%2033-Ya5VqX1HBVNf5FBhMzfXlZpybLJEA5.png"
-                alt="HyWork Platform Customization"
-                width={600}
-                height={500}
-                className="rounded-lg shadow-xl"
-              />
+              <Image src="./Noticias.png" alt="HyWork Platform Customization" width={600} height={500} className="rounded-lg shadow-xl" />
             </motion.div>
           </motion.div>
 
@@ -44,7 +38,7 @@ export default function FlexibilitySection() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <motion.h2
-              className="text-3xl md:text-4xl font-bold text-hywork-blue dark:text-blue-300 mb-6"
+              className="text-3xl md:text-5xl font-bold text-hywork-blue dark:text-blue-300 mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}

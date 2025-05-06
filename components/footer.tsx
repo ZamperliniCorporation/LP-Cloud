@@ -17,8 +17,10 @@ export default function Footer() {
             <p className="text-sm text-gray-500 dark:text-gray-400">{t("footer.developedBy")}</p>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="mb-6">
-            <Image src="./Logo.png" alt="HyWork Logo" width={120} height={40} className="h-8 w-auto" />
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-6">
+            <Link href="https://hywork.com.br" target="_blank" rel="noopener noreferrer" aria-label="HyWork">
+              <Image src="./HW.png" alt="HyWork Logo" width={100} height={100} className="w-16" />
+            </Link>
           </motion.div>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.3 }} className="flex space-x-4">
