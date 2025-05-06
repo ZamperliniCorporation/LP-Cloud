@@ -9,9 +9,9 @@ export default function CTASection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 bg-hywork-gray-lighter dark:bg-gray-800 relative" id="contato">
+    <section id="contato" className="py-20 bg-hywork-gray-lighter dark:bg-gray-800 relative">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
-        <motion.div className="max-w-5xl mx-auto text-center bg-white dark:bg-gray-900 p-16 shadow-sm rounded-xl relative">
+        <motion.div className="max-w-5xl mx-auto text-center bg-white dark:bg-gray-900 p-16 shadow-sm rounded-xl relative rounded-br-[80px]">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
             <motion.h2
               className="text-3xl md:text-4xl font-bold text-hywork-blue dark:text-blue-300 mb-6"
