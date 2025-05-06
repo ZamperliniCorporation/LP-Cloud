@@ -1,0 +1,90 @@
+{
+  "header": {
+    "home": "Home",
+    "resources": "Resources",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "earlyAccess": "Get Early Access"
+  },
+  "hero": {
+    "title": "The first no-code corporate portal in Brazil",
+    "subtitle": "Create unique experiences for your professionals without technical knowledge.",
+    "cta": "Get Early Access",
+    "scrollText": "Scroll to see more"
+  },
+  "features": {
+    "title": "Everything you need to create a modern portal",
+    "dragDrop": {
+      "title": "Drag & Drop Building",
+      "description": "Drag and drop widgets to create dynamic pages in minutes."
+    },
+    "customization": {
+      "title": "Total Customization",
+      "description": "Adapt colors, themes, and styles to reflect your identity."
+    },
+    "publishing": {
+      "title": "Simplified Publishing",
+      "description": "Share news and documents in just a few clicks."
+    },
+    "metrics": {
+      "title": "Real-Time Metrics",
+      "description": "Track engagement with detailed analytics."
+    },
+    "implementation": {
+      "title": "Quick Implementation",
+      "description": "Set up your intranet in hours, not months."
+    },
+    "modules": {
+      "title": "Module Library",
+      "description": "Ready-made components, ideal for every need and purpose of your portal."
+    }
+  },
+  "flexibility": {
+    "title": "Freedom to create your site your way",
+    "subtitle": "Start from what your company needs.",
+    "categories": ["Franchises", "Communication", "Projects", "Departments", "Processes"],
+    "cta": "Get Early Access"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "startup": {
+      "name": "Startup",
+      "price": "$70",
+      "period": "per site",
+      "description": "For companies that are just starting",
+      "features": ["Up to 25 users + 1 admin", "Basic features"]
+    },
+    "growth": {
+      "name": "Growth",
+      "price": "$150",
+      "period": "per site",
+      "description": "For companies in expansion phase",
+      "features": ["From 25 to 100 users, 2 admins and 2 editors", "Static and dynamic domains", "Advanced features"]
+    },
+    "business": {
+      "name": "Business",
+      "price": "$300",
+      "period": "per site",
+      "description": "For large companies with advanced resources",
+      "features": ["From 50 to 1,000 users, unlimited admins", "Workflows", "Advanced features"]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Companies with advanced customization demands",
+      "period": "",
+      "description": "Customization according to needs",
+      "features": ["Customization according to needs"]
+    }
+  },
+  "cta": {
+    "title": "Ready to transform your way of communicating?",
+    "subtitle": "Create, customize, and publish without complications. Try Hywork Cloud and revolutionize your internal communication!",
+    "button": "Get Early Access"
+  },
+  "footer": {
+    "developedBy": "Developed by"
+  },
+  "languageSwitcher": {
+    "language": "Language"
+  }
+}

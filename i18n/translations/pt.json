@@ -1,0 +1,94 @@
+{
+  "header": {
+    "home": "Home",
+    "resources": "Recursos",
+    "pricing": "Preço",
+    "contact": "Contato",
+    "earlyAccess": "Quero Acesso Antecipado"
+  },
+  "hero": {
+    "title": "O primeiro portal corporativo no-code do Brasil",
+    "subtitle": "Crie experiências únicas para seus profissionais sem precisar de conhecimentos técnicos.",
+    "cta": "Quero Acesso Antecipado",
+    "scrollText": "Role para ver mais"
+  },
+  "features": {
+    "title": "Tudo que você precisa para criar um portal moderno",
+    "dragDrop": {
+      "title": "Construção Drag & Drop",
+      "description": "Arraste e solte widgets para criar páginas dinâmicas em minutos."
+    },
+    "customization": {
+      "title": "Personalização Total",
+      "description": "Adapte cores, temas e estilos para refletir sua identidade."
+    },
+    "publishing": {
+      "title": "Publicação Simplificada",
+      "description": "Compartilhe notícias e documentos em poucos cliques."
+    },
+    "metrics": {
+      "title": "Métricas em Tempo Real",
+      "description": "Acompanhe o engajamento com analytics detalhados."
+    },
+    "implementation": {
+      "title": "Implementação Rápida",
+      "description": "Configure seu intranet em questão de horas, não meses."
+    },
+    "modules": {
+      "title": "Biblioteca de Módulos",
+      "description": "Componentes prontos, ideais para cada necessidade e propósito do seu portal."
+    }
+  },
+  "flexibility": {
+    "title": "Liberdade para criar seu site do seu jeito",
+    "subtitle": "Comece a partir do que sua empresa precisa.",
+    "categories": ["Franquias", "Comunicação", "Projetos", "Departamentos", "Processos"],
+    "cta": "Quero Acesso Antecipado"
+  },
+  "pricing": {
+    "title": "Preço",
+    "startup": {
+      "name": "Startup",
+      "price": "R$ 359,00",
+      "period": "por site",
+      "description": "Para empresas que estão começando",
+      "features": ["Até 25 usuários + 1 admin", "Funcionalidades básicas"]
+    },
+    "growth": {
+      "name": "Growth",
+      "price": "R$ 759,00",
+      "period": "por site",
+      "description": "Para empresas em fase de expansão",
+      "features": [
+        "De 25 a 100 usuários, 2 admins e 2 editores",
+        "Domínios estáticos e dinâmicos",
+        "Funcionalidades avançadas"
+      ]
+    },
+    "business": {
+      "name": "Business",
+      "price": "R$ 1.499,00",
+      "period": "por site",
+      "description": "Para grandes empresas com recursos avançados",
+      "features": ["De 50 a 1.000 usuários, admins ilimitados", "Workflows", "Funcionalidades avançadas"]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Empresas com demandas avançadas de personalização",
+      "period": "",
+      "description": "Personalização de acordo com as necessidades",
+      "features": ["Personalização de acordo com as necessidades"]
+    }
+  },
+  "cta": {
+    "title": "Pronto para transformar sua forma de comunicar?",
+    "subtitle": "Crie, personalize e publique sem complicações. Experimente o Hywork Cloud e revolucione sua comunicação interna!",
+    "button": "Quero Acesso Antecipado"
+  },
+  "footer": {
+    "developedBy": "Desenvolvido por"
+  },
+  "languageSwitcher": {
+    "language": "Idioma"
+  }
+}
