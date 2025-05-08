@@ -64,13 +64,13 @@ export default function PricingSection() {
               className="h-full"
             >
               <div
-                className={`h-full ${
+                className={`h-full flex flex-col ${
                   plan.name === t("pricing.enterprise.name") ? "bg-[#104a74] dark:bg-[#1a6ca0] text-white" : "bg-white text-black"
                 } rounded-lg border-0 shadow-lg p-6`}
               >
-                <div className="mb-4">
+                <div className="mb-6">
                   <motion.h3
-                    className="text-xl font-bold"
+                    className="text-xl font-bold mb-2"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 + 0.1 }}
@@ -79,7 +79,7 @@ export default function PricingSection() {
                     {plan.name}
                   </motion.h3>
                   <motion.p
-                    className={plan.name === t("pricing.enterprise.name") ? "text-gray-200" : "text-gray-500"}
+                    className={`text-sm ${plan.name === t("pricing.enterprise.name") ? "text-gray-200" : "text-gray-500"}`}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 + 0.2 }}
@@ -89,30 +89,31 @@ export default function PricingSection() {
                   </motion.p>
                 </div>
 
-                {plan.custom ? (
-                  <motion.p
-                    className="text-lg font-medium mb-4"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
-                    viewport={{ once: true }}
-                  >
-                    {plan.price}
-                  </motion.p>
-                ) : (
-                  <motion.div
-                    className="mb-6"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
-                    viewport={{ once: true }}
-                  >
-                    <p className="text-2xl font-bold">{plan.price}</p>
-                    <p className="text-sm text-gray-500">{plan.period}</p>
-                  </motion.div>
-                )}
+                <div className="mb-8 h-[72px] flex items-center">
+                  {plan.custom ? (
+                    <motion.p
+                      className="text-lg font-medium"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
+                      viewport={{ once: true }}
+                    >
+                      {plan.price}
+                    </motion.p>
+                  ) : (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
+                      viewport={{ once: true }}
+                    >
+                      <p className="text-2xl font-bold">{plan.price}</p>
+                      <p className="text-sm text-gray-500">{plan.period}</p>
+                    </motion.div>
+                  )}
+                </div>
 
-                <ul className="space-y-3">
+                <ul className="space-y-3 flex-grow">
                   {(Array.isArray(plan.features) ? plan.features : [plan.features]).map((feature: string, idx: number) => (
                     <motion.li
                       key={idx}

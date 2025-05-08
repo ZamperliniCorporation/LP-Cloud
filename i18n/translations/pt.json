@@ -59,17 +59,13 @@
       "price": "R$ 759,00",
       "period": "por site",
       "description": "Para empresas em fase de expansão",
-      "features": [
-        "De 25 a 100 usuários, 2 admins e 2 editores",
-        "Domínios estáticos e dinâmicos",
-        "Funcionalidades avançadas"
-      ]
+      "features": ["De 25 a 100 usuários, 2 admins e 2 editores", "Domínios estáticos e dinâmicos", "Funcionalidades avançadas"]
     },
     "business": {
       "name": "Business",
       "price": "R$ 1.499,00",
       "period": "por site",
-      "description": "Para grandes empresas com recursos avançados",
+      "description": "Para grandes empresas ",
       "features": ["De 50 a 1.000 usuários, admins ilimitados", "Workflows", "Funcionalidades avançadas"]
     },
     "enterprise": {
@@ -90,5 +86,16 @@
   },
   "languageSwitcher": {
     "language": "Idioma"
+  },
+  "earlyAccess": {
+    "title": "Quero acesso antecipado",
+    "subtitle": "Preencha o formulário abaixo para garantir seu acesso antecipado à plataforma HyWork Cloud.",
+    "form": {
+      "name": "Nome completo",
+      "email": "E-mail corporativo",
+      "company": "Nome da empresa",
+      "position": "Cargo",
+      "submit": "Solicitar acesso"
+    }
   }
 }

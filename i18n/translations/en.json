@@ -86,5 +86,16 @@
   },
   "languageSwitcher": {
     "language": "Language"
+  },
+  "earlyAccess": {
+    "title": "Request Early Access",
+    "subtitle": "Fill out the form below to secure your early access to the HyWork Cloud platform.",
+    "form": {
+      "name": "Full Name",
+      "email": "Corporate Email",
+      "company": "Company Name",
+      "position": "Position",
+      "submit": "Request Access"
+    }
   }
 }

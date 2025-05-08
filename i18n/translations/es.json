@@ -59,22 +59,14 @@
       "price": "€140",
       "period": "por sitio",
       "description": "Para empresas en fase de expansión",
-      "features": [
-        "De 25 a 100 usuarios, 2 administradores y 2 editores",
-        "Dominios estáticos y dinámicos",
-        "Funcionalidades avanzadas"
-      ]
+      "features": ["De 25 a 100 usuarios, 2 administradores y 2 editores", "Dominios estáticos y dinámicos", "Funcionalidades avanzadas"]
     },
     "business": {
       "name": "Business",
       "price": "€280",
       "period": "por sitio",
       "description": "Para grandes empresas con recursos avanzados",
-      "features": [
-        "De 50 a 1.000 usuarios, administradores ilimitados",
-        "Flujos de trabajo",
-        "Funcionalidades avanzadas"
-      ]
+      "features": ["De 50 a 1.000 usuarios, administradores ilimitados", "Flujos de trabajo", "Funcionalidades avanzadas"]
     },
     "enterprise": {
       "name": "Enterprise",
@@ -94,5 +86,16 @@
   },
   "languageSwitcher": {
     "language": "Idioma"
+  },
+  "earlyAccess": {
+    "title": "Solicitar acceso anticipado",
+    "subtitle": "Complete el formulario a continuación para asegurar su acceso anticipado a la plataforma HyWork Cloud.",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico corporativo",
+      "company": "Nombre de la empresa",
+      "position": "Cargo",
+      "submit": "Solicitar acceso"
+    }
   }
 }
