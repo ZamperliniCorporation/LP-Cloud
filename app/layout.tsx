@@ -9,7 +9,6 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "HyWork Cloud - O primeiro portal corporativo no-code do Brasil",
   description: "Crie experiências únicas para seus profissionais sem precisar de conhecimentos técnicos.",
-  generator: "v0.dev",
 };
 
 export default function RootLayout({
