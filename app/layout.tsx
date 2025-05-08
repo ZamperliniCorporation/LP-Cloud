@@ -4,6 +4,7 @@ import { ltWave } from "@/lib/fonts";
 import { LanguageProvider } from "@/i18n/language-context";
 import { ThemeProvider } from "@/components/theme/theme-context";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import GoogleTagManager from "@/components/GoogleTagManager";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,12 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <GoogleAnalytics />
+        <GoogleTagManager />
+      </head>
       <body className={`${ltWave.variable} dark-transition`} suppressHydrationWarning>
         <ThemeProvider>
-          <LanguageProvider>
-            <GoogleAnalytics />
-            {children}
-          </LanguageProvider>
+          <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
