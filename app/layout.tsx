@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ltWave } from "@/lib/fonts";
 import { LanguageProvider } from "@/i18n/language-context";
 import { ThemeProvider } from "@/components/theme/theme-context";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,7 +21,10 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${ltWave.variable} dark-transition`} suppressHydrationWarning>
         <ThemeProvider>
-          <LanguageProvider>{children}</LanguageProvider>
+          <LanguageProvider>
+            <GoogleAnalytics />
+            {children}
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
