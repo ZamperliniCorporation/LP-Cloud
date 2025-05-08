@@ -93,30 +93,9 @@ export default function FeaturesSection() {
               }}
               viewport={{ once: true }}
             >
-              <motion.div
-                className="mb-4 relative"
-                initial={{ scale: 0.8, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.2 + index * 0.1, duration: 0.3 }}
-                viewport={{ once: true }}
-                whileHover={{
-                  rotate: [0, -5, 5, -5, 0],
-                  transition: { duration: 0.5 },
-                }}
-              >
-                {feature.icon}
-                <motion.div
-                  className="absolute -z-10 inset-0 bg-orange-100 dark:bg-orange-900/30 rounded-full opacity-0 scale-50"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  whileHover={{
-                    opacity: 0.6,
-                    scale: 1.2,
-                    transition: { duration: 0.3 },
-                  }}
-                />
-              </motion.div>
+              <div className="mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-hywork-blue dark:text-blue-300 mb-2">{feature.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
+              <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>
