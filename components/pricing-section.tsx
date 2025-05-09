@@ -94,7 +94,8 @@ export default function PricingSection() {
                     plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"
                   } font-semibold text-lg mb-1 opacity-80 flex items-center gap-2`}
                 >
-                  <span className="blur-sm select-none">{plan.price}</span> <span className="font-normal text-base opacity-70">{plan.period}</span>
+                  <span className={`${plan.name === "Enterprise" ? "" : "blur-sm select-none"}`}>{plan.price}</span>{" "}
+                  <span className="font-normal text-base opacity-70">{plan.period}</span>
                 </div>
                 <div className={`${plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"} mb-2 opacity-80 text-base`}>
                   {plan.description}

@@ -69,14 +69,14 @@
       "name": "Business",
       "price": "R$ 1.499,00",
       "period": "por site",
-      "description": "Para grandes empresas ",
+      "description": "Para grandes empresas com recursos avançados",
       "features": ["De 50 a 100 usuários, 2 admins e 2 admins de conteúdo", "Workflows - Em breve", "+ Funcionalidades avançadas - Em breve"]
     },
     "enterprise": {
       "name": "Enterprise",
       "price": "Empresas com demandas avançadas de personalização",
       "period": "",
-      "description": "Personalização de acordo com as necessidades",
+      "description": "",
       "features": ["Personalização de acordo com as necessidades"]
     }
   },
