@@ -52,28 +52,32 @@
       "price": "R$ 359,00",
       "period": "per site",
       "description": "For companies that are just starting",
-      "features": ["Up to 25 users + 1 admin", "Basic features"]
+      "features": ["Up to 20 users, 1 admin and 1 content admin", "Static elements", "Basic features"]
     },
     "growth": {
       "name": "Growth",
       "price": "R$ 759,00",
       "period": "per site",
       "description": "For companies in expansion phase",
-      "features": ["From 25 to 100 users, 2 admins and 2 editors", "Static and dynamic domains", "Advanced features"]
+      "features": [
+        "From 21 to 50 users, 2 admins and 2 content admins",
+        "Static and dynamic elements - Coming soon",
+        "Advanced features - Coming soon"
+      ]
     },
     "business": {
       "name": "Business",
       "price": "R$ 1.499,00",
       "period": "per site",
       "description": "For large companies with advanced resources",
-      "features": ["From 50 to 1,000 users, unlimited admins", "Workflows", "Advanced features"]
+      "features": ["From 51 to 100 users, unlimited admins", "Workflows - Coming soon", "+ Advanced features - Coming soon"]
     },
     "enterprise": {
       "name": "Enterprise",
-      "price": "Companies with advanced customization demands",
+      "price": "Companies with highly customized demands",
       "period": "",
-      "description": "Customization according to needs",
-      "features": ["Customization according to needs"]
+      "description": "Customize according to your needs",
+      "features": ["Customize according to your needs"]
     }
   },
   "cta": {

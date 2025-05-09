@@ -52,21 +52,25 @@
       "price": "R$ 359,00",
       "period": "por site",
       "description": "Para empresas que estão começando",
-      "features": ["Até 25 usuários + 1 admin", "Funcionalidades básicas"]
+      "features": ["Até 20 usuários, 1 admin e 1 admin de conteúdo", "Elementos estáticos", "Funcionalidades básicas"]
     },
     "growth": {
       "name": "Growth",
       "price": "R$ 759,00",
       "period": "por site",
       "description": "Para empresas em fase de expansão",
-      "features": ["De 25 a 100 usuários, 2 admins e 2 editores", "Domínios estáticos e dinâmicos", "Funcionalidades avançadas"]
+      "features": [
+        "De 21 até 50 usuários, 2 admins e 2 admins de conteúdo",
+        "Elementos estáticos e dinâmicos - Em breve",
+        "Funcionalidades avançadas - Em breve"
+      ]
     },
     "business": {
       "name": "Business",
       "price": "R$ 1.499,00",
       "period": "por site",
       "description": "Para grandes empresas ",
-      "features": ["De 50 a 1.000 usuários, admins ilimitados", "Workflows", "Funcionalidades avançadas"]
+      "features": ["De 50 a 100 usuários, 2 admins e 2 admins de conteúdo", "Workflows - Em breve", "+ Funcionalidades avançadas - Em breve"]
     },
     "enterprise": {
       "name": "Enterprise",
