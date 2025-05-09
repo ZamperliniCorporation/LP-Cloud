@@ -23,7 +23,7 @@ export default function PricingSection() {
         { label: t("pricing.startup.features.2"), type: "check" },
       ],
       buttonColor: "bg-gradient-to-r from-[#F6A623] to-[#F2994A] text-white",
-      cardColor: "bg-white text-black",
+      cardColor: "bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 border border-gray-100 dark:border-gray-700",
     },
     {
       name: t("pricing.growth.name"),
@@ -36,7 +36,7 @@ export default function PricingSection() {
         { label: t("pricing.growth.features.2"), type: "clock" },
       ],
       buttonColor: "bg-gradient-to-r from-[#F6A623] to-[#F2994A] text-white",
-      cardColor: "bg-white text-black",
+      cardColor: "bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 border border-gray-100 dark:border-gray-700",
     },
     {
       name: t("pricing.business.name"),
@@ -49,7 +49,7 @@ export default function PricingSection() {
         { label: t("pricing.business.features.2"), type: "clock" },
       ],
       buttonColor: "bg-gradient-to-r from-[#F6A623] to-[#F2994A] text-white",
-      cardColor: "bg-white text-black",
+      cardColor: "bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 border border-gray-100 dark:border-gray-700",
     },
     {
       name: t("pricing.enterprise.name"),
@@ -58,7 +58,7 @@ export default function PricingSection() {
       description: t("pricing.enterprise.description"),
       features: [{ label: t("pricing.enterprise.features.0"), type: "check" }],
       buttonColor: "bg-[#256189] text-white",
-      cardColor: "bg-[#18344A] text-white",
+      cardColor: "bg-[#18344A] text-white border border-[#256189]",
     },
   ];
 
