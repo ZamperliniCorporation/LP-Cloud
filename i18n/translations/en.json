@@ -49,21 +49,21 @@
     "title": "Pricing",
     "startup": {
       "name": "Startup",
-      "price": "$70",
+      "price": "R$ 359,00",
       "period": "per site",
       "description": "For companies that are just starting",
       "features": ["Up to 25 users + 1 admin", "Basic features"]
     },
     "growth": {
       "name": "Growth",
-      "price": "$150",
+      "price": "R$ 759,00",
       "period": "per site",
       "description": "For companies in expansion phase",
       "features": ["From 25 to 100 users, 2 admins and 2 editors", "Static and dynamic domains", "Advanced features"]
     },
     "business": {
       "name": "Business",
-      "price": "$300",
+      "price": "R$ 1.499,00",
       "period": "per site",
       "description": "For large companies with advanced resources",
       "features": ["From 50 to 1,000 users, unlimited admins", "Workflows", "Advanced features"]

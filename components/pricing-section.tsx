@@ -4,56 +4,59 @@ import { motion } from "framer-motion";
 import { Check, Clock } from "lucide-react";
 import { useLanguage } from "@/i18n/language-context";
 import { trackEarlyAccessClick } from "@/lib/gtag";
+import { EarlyAccessDialog } from "./ui/early-access-dialog";
+import { useState } from "react";
 
 export default function PricingSection() {
   const { t } = useLanguage();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const pricingPlans = [
     {
-      name: "Startup",
-      price: "R$ 359,00",
-      period: "por site",
-      description: "Para empresas que estão começando",
+      name: t("pricing.startup.name"),
+      price: t("pricing.startup.price"),
+      period: t("pricing.startup.period"),
+      description: t("pricing.startup.description"),
       features: [
-        { label: "Até 20 usuários, 1 admin e 1 admin de conteúdo", type: "check" },
-        { label: "Elementos estáticos", type: "check" },
-        { label: "Funcionalidades básica", type: "check" },
+        { label: t("pricing.startup.features.0"), type: "check" },
+        { label: t("pricing.startup.features.1"), type: "check" },
+        { label: t("pricing.startup.features.2"), type: "check" },
       ],
       buttonColor: "bg-gradient-to-r from-[#F6A623] to-[#F2994A] text-white",
       cardColor: "bg-white text-black",
     },
     {
-      name: "Growth",
-      price: "R$ 759,00",
-      period: "por site",
-      description: "Para empresas em fase de expansão",
+      name: t("pricing.growth.name"),
+      price: t("pricing.growth.price"),
+      period: t("pricing.growth.period"),
+      description: t("pricing.growth.description"),
       features: [
-        { label: "De 21 até 50 usuários, 2 admins e 2 admins conteúdo", type: "check" },
-        { label: "Elementos estáticos e dinâmicos – Em breve", type: "clock" },
-        { label: "Funcionalidades avançadas – Em breve", type: "clock" },
+        { label: t("pricing.growth.features.0"), type: "check" },
+        { label: t("pricing.growth.features.1"), type: "clock" },
+        { label: t("pricing.growth.features.2"), type: "clock" },
       ],
       buttonColor: "bg-gradient-to-r from-[#F6A623] to-[#F2994A] text-white",
       cardColor: "bg-white text-black",
     },
     {
-      name: "Business",
-      price: "R$ 1.499,00",
-      period: "por site",
-      description: "Para grandes empresas com recursos avançados",
+      name: t("pricing.business.name"),
+      price: t("pricing.business.price"),
+      period: t("pricing.business.period"),
+      description: t("pricing.business.description"),
       features: [
-        { label: "De 51 a 100 usuários, admins ilimitados", type: "check" },
-        { label: "Workflows – Em breve", type: "clock" },
-        { label: "+ Funcionalidades avançadas – Em breve", type: "clock" },
+        { label: t("pricing.business.features.0"), type: "check" },
+        { label: t("pricing.business.features.1"), type: "clock" },
+        { label: t("pricing.business.features.2"), type: "clock" },
       ],
       buttonColor: "bg-gradient-to-r from-[#F6A623] to-[#F2994A] text-white",
       cardColor: "bg-white text-black",
     },
     {
-      name: "Enterprise",
-      price: "Empresas com demandas altamente personalizadas",
-      period: "",
-      description: "Personalize de acordo com a sua necessidade",
-      features: [{ label: "Personalize de acordo com a sua necessidade", type: "check" }],
+      name: t("pricing.enterprise.name"),
+      price: t("pricing.enterprise.price"),
+      period: t("pricing.enterprise.period"),
+      description: t("pricing.enterprise.description"),
+      features: [{ label: t("pricing.enterprise.features.0"), type: "check" }],
       buttonColor: "bg-[#256189] text-white",
       cardColor: "bg-[#18344A] text-white",
     },
@@ -111,7 +114,10 @@ export default function PricingSection() {
               </div>
               <button
                 className={`w-full mt-auto py-2.5 rounded-lg font-semibold shadow-sm transition-all ${plan.buttonColor}`}
-                onClick={() => trackEarlyAccessClick(`pricing-${plan.name.toLowerCase()}`)}
+                onClick={() => {
+                  setIsDialogOpen(true);
+                  trackEarlyAccessClick(`pricing-${String(plan.name).toLowerCase()}`);
+                }}
               >
                 Quero Acesso Antecipado
               </button>
@@ -119,6 +125,7 @@ export default function PricingSection() {
           ))}
         </div>
       </div>
+      <EarlyAccessDialog isOpen={isDialogOpen} onClose={() => setIsDialogOpen(false)} />
     </section>
   );
 }

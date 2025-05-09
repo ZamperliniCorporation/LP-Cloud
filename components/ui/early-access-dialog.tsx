@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useLanguage } from "@/i18n/language-context";
 
@@ -12,9 +12,19 @@ interface EarlyAccessDialogProps {
 
 export function EarlyAccessDialog({ isOpen, onClose, forceLightMode }: EarlyAccessDialogProps) {
   const { t } = useLanguage();
+  const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
+    let timeout: NodeJS.Timeout;
     if (isOpen) {
+      setShowForm(false);
+      timeout = setTimeout(() => setShowForm(true), 1000);
+    }
+    return () => clearTimeout(timeout);
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen && showForm) {
       // Carregar o script do HubSpot
       const script = document.createElement("script");
       script.src = "//js.hsforms.net/forms/embed/v2.js";
@@ -38,7 +48,7 @@ export function EarlyAccessDialog({ isOpen, onClose, forceLightMode }: EarlyAcce
         document.body.removeChild(script);
       };
     }
-  }, [isOpen]);
+  }, [isOpen, showForm]);
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -54,7 +64,20 @@ export function EarlyAccessDialog({ isOpen, onClose, forceLightMode }: EarlyAcce
             {t("earlyAccess.subtitle")}
           </DialogDescription>
         </DialogHeader>
-        <div id="hubspot-form-container" className="mt-4 max-h-[60vh] overflow-y-auto pr-2" />
+        {!showForm ? (
+          <div className="mt-4 max-h-[60vh] overflow-y-auto pr-2 animate-pulse">
+            <div className="h-6 bg-gray-200 rounded w-3/4 mb-4" />
+            <div className="h-4 bg-gray-200 rounded w-1/2 mb-2" />
+            <div className="h-4 bg-gray-200 rounded w-2/3 mb-2" />
+            <div className="h-4 bg-gray-200 rounded w-1/2 mb-2" />
+            <div className="h-10 bg-gray-200 rounded w-full mb-4" />
+            <div className="h-10 bg-gray-200 rounded w-full mb-4" />
+            <div className="h-10 bg-gray-200 rounded w-full mb-4" />
+            <div className="h-10 bg-gray-200 rounded w-1/2 mb-4" />
+          </div>
+        ) : (
+          <div id="hubspot-form-container" className="mt-4 max-h-[60vh] overflow-y-auto pr-2" />
+        )}
       </DialogContent>
     </Dialog>
   );
