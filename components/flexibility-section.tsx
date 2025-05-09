@@ -3,10 +3,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/language-context";
+import { EarlyAccessDialog } from "./ui/early-access-dialog";
+import { trackEarlyAccessClick } from "@/lib/gtag";
+import { useState } from "react";
 
 export default function FlexibilitySection() {
   const { t } = useLanguage();
   const categories = t("flexibility.categories") as string[];
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
     <section className="py-40 bg-hywork-gray-lighter dark:bg-gray-800 relative ">
@@ -100,13 +104,20 @@ export default function FlexibilitySection() {
               transition={{ duration: 0.5, delay: 0.8 }}
               viewport={{ once: true }}
             >
-              <button className="bg-[#104a74] dark:bg-[#1a6ca0] text-primary-foreground font-medium py-2 px-6 rounded-md transition-all hover:bg-[#104a74]/90 dark:hover:bg-[#1a6ca0]/90">
+              <button
+                className="bg-[#104a74] dark:bg-[#1a6ca0] text-primary-foreground font-medium py-2 px-6 rounded-md transition-all hover:bg-[#104a74]/90 dark:hover:bg-[#1a6ca0]/90"
+                onClick={() => {
+                  setIsDialogOpen(true);
+                  trackEarlyAccessClick("flexibility");
+                }}
+              >
                 {t("flexibility.cta")}
               </button>
             </motion.div>
           </motion.div>
         </div>
       </div>
+      <EarlyAccessDialog isOpen={isDialogOpen} onClose={() => setIsDialogOpen(false)} forceLightMode />
     </section>
   );
 }

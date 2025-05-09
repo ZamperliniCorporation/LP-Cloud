@@ -7,9 +7,10 @@ import { useLanguage } from "@/i18n/language-context";
 interface EarlyAccessDialogProps {
   isOpen: boolean;
   onClose: () => void;
+  forceLightMode?: boolean;
 }
 
-export function EarlyAccessDialog({ isOpen, onClose }: EarlyAccessDialogProps) {
+export function EarlyAccessDialog({ isOpen, onClose, forceLightMode }: EarlyAccessDialogProps) {
   const { t } = useLanguage();
 
   useEffect(() => {
@@ -41,12 +42,19 @@ export function EarlyAccessDialog({ isOpen, onClose }: EarlyAccessDialogProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[500px]">
+      <DialogContent
+        className={`sm:max-w-[500px] ${forceLightMode ? "bg-white text-gray-900" : ""}`}
+        style={forceLightMode ? { backgroundColor: "#fff", color: "#222" } : {}}
+      >
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-hywork-blue dark:text-blue-300">{t("earlyAccess.title")}</DialogTitle>
-          <DialogDescription className="text-gray-600 dark:text-gray-400 mt-2">{t("earlyAccess.subtitle")}</DialogDescription>
+          <DialogTitle className={`text-2xl font-bold ${forceLightMode ? "text-hywork-blue" : "text-hywork-blue dark:text-blue-300"}`}>
+            {t("earlyAccess.title")}
+          </DialogTitle>
+          <DialogDescription className={`mt-2 ${forceLightMode ? "text-gray-600" : "text-gray-600 dark:text-gray-400"}`}>
+            {t("earlyAccess.subtitle")}
+          </DialogDescription>
         </DialogHeader>
-        <div id="hubspot-form-container" className="mt-4" />
+        <div id="hubspot-form-container" className="mt-4 max-h-[60vh] overflow-y-auto pr-2" />
       </DialogContent>
     </Dialog>
   );

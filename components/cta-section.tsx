@@ -6,6 +6,7 @@ import { Typewriter } from "./ui/typewriter";
 import { useLanguage } from "@/i18n/language-context";
 import { useState } from "react";
 import { EarlyAccessDialog } from "./ui/early-access-dialog";
+import { trackEarlyAccessClick } from "@/lib/gtag";
 
 export default function CTASection() {
   const { t } = useLanguage();
@@ -50,7 +51,10 @@ export default function CTASection() {
                 viewport={{ once: true }}
               >
                 <button
-                  onClick={() => setIsDialogOpen(true)}
+                  onClick={() => {
+                    setIsDialogOpen(true);
+                    trackEarlyAccessClick("cta");
+                  }}
                   className="bg-[#104a74] dark:bg-[#1a6ca0] text-primary-foreground font-medium py-3 px-8 rounded-md hover:bg-[#104a74]/90 dark:hover:bg-[#1a6ca0]/90 transition-all"
                 >
                   {t("cta.button")}

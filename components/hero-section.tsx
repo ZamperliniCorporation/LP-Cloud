@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 import { useLanguage } from "@/i18n/language-context";
 import ScrollDownIndicator from "./scroll-down-indicator";
 import { EarlyAccessDialog } from "./ui/early-access-dialog";
+import { trackEarlyAccessClick } from "@/lib/gtag";
 
 export default function HeroSection() {
   const ref = useRef(null);
@@ -31,7 +32,13 @@ export default function HeroSection() {
           className="relative hidden md:block md:absolute right-0 bottom-0"
         >
           <motion.div style={{ opacity, y }}>
-            <Image src="./hero.png" alt="HyWork Platform Interface" width={800} height={800} className="rounded-tl-3xl shadow-xl" />
+            <Image
+              src="./hero.png"
+              alt="HyWork Platform Interface"
+              width={800}
+              height={800}
+              className="rounded-tl-3xl shadow-xl md:w-[450px] md:h-[400px] lg:w-[750px] lg:h-[700px]"
+            />
           </motion.div>
         </motion.div>
         <motion.div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10" style={{ opacity, y }}>
@@ -59,7 +66,10 @@ export default function HeroSection() {
                 transition={{ delay: 3, duration: 0.5 }}
               >
                 <button
-                  onClick={() => setIsDialogOpen(true)}
+                  onClick={() => {
+                    setIsDialogOpen(true);
+                    trackEarlyAccessClick("hero");
+                  }}
                   className="bg-[#104a74] dark:bg-[#1a6ca0] text-white font-medium py-2 px-6 rounded-md hover:bg-[#104a74]/90 dark:hover:bg-[#1a6ca0]/90 transition-all"
                 >
                   {t("hero.cta")}

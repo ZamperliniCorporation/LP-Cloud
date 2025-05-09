@@ -9,6 +9,7 @@ import { useLanguage } from "@/i18n/language-context";
 import LanguageSwitcher from "./language-switcher";
 import { ThemeToggle } from "./theme/theme-toggle";
 import { EarlyAccessDialog } from "./ui/early-access-dialog";
+import { trackEarlyAccessClick } from "@/lib/gtag";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,8 +72,11 @@ export default function Header() {
             <LanguageSwitcher />
             <ThemeToggle />
             <button
-              onClick={() => setIsDialogOpen(true)}
-              className="bg-[#104a74] dark:bg-[#1a6ca0] text-primary-foreground font-medium py-2.5 px-6 rounded-lg transition-all shadow-sm hover:bg-[#104a74]/90 dark:hover:bg-[#1a6ca0]/90"
+              onClick={() => {
+                setIsDialogOpen(true);
+                trackEarlyAccessClick("header");
+              }}
+              className="bg-[#104a74] dark:bg-[#1a6ca0] text-white font-medium py-2.5 px-6 rounded-lg transition-all shadow-sm hover:bg-[#104a74]/90 dark:hover:bg-[#1a6ca0]/90"
             >
               {t("header.earlyAccess")}
             </button>
@@ -130,6 +134,7 @@ export default function Header() {
                 onClick={() => {
                   setIsMenuOpen(false);
                   setIsDialogOpen(true);
+                  trackEarlyAccessClick("header-mobile");
                 }}
                 className="bg-primary text-primary-foreground font-medium py-2.5 px-6 rounded-lg hover:bg-primary/90 transition-all shadow-sm hover:shadow w-full"
               >
