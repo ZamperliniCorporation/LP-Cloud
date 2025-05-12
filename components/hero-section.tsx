@@ -37,7 +37,7 @@ export default function HeroSection() {
               alt="HyWork Platform Interface"
               width={800}
               height={800}
-              className="rounded-tl-3xl shadow-xl md:w-[450px] md:h-[400px] lg:w-[750px] lg:h-[700px]"
+              className="rounded-tl-3xl shadow-xl md:w-[600px] md:h-[500px] xl:w-[750px] xl:h-[700px]"
             />
           </motion.div>
         </motion.div>
