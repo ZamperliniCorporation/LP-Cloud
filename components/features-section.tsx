@@ -83,15 +83,14 @@ export default function FeaturesSection() {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="feature-card bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:border-[#104a74]/30 dark:hover:border-[#1a6ca0]/30"
+              className="feature-card bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-100 dark:border-gray-700 transition-all duration-300"
               variants={itemVariants}
+              viewport={{ once: true }}
               whileHover={{
                 scale: 1.03,
-                backgroundColor: "rgba(240, 245, 250, 1)",
-                boxShadow: "0 8px 30px rgba(0, 0, 0, 0.08)",
+
                 transition: { duration: 0.3, ease: "easeOut" },
               }}
-              viewport={{ once: true }}
             >
               <div className="mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-hywork-blue dark:text-blue-300 mb-2">{feature.title}</h3>

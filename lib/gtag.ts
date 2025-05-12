@@ -10,7 +10,7 @@ interface GtagEvent {
   location: string;
 }
 
-export function trackEarlyAccessClick(location: string): void {
+export function trackEarlyAccessClick(location: string): string {
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
     const eventData: GtagEvent = {
       event_category: "engagement",
@@ -18,5 +18,7 @@ export function trackEarlyAccessClick(location: string): void {
       location,
     };
     window.gtag("event", "early_access_click", eventData);
+    return location;
   }
+  return "Não registrado";
 }
