@@ -84,7 +84,6 @@ export default function FlexibilitySection() {
                   viewport={{ once: true }}
                   whileHover={{
                     scale: 1.1,
-                    backgroundColor: "#104a74",
                     color: "white",
                   }}
                   whileTap={{ scale: 0.95 }}
