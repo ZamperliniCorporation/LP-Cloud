@@ -53,7 +53,7 @@ export function EarlyAccessDialog({ isOpen, onClose, forceLightMode }: EarlyAcce
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
-        className={`sm:max-w-[500px] ${forceLightMode ? "bg-white text-gray-900" : ""}`}
+        className={`sm:max-w-[600px] ${forceLightMode ? "bg-white text-gray-900" : ""}`}
         style={forceLightMode ? { backgroundColor: "#fff", color: "#222" } : {}}
       >
         <DialogHeader>
