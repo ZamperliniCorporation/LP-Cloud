@@ -16,7 +16,7 @@
     "title": "Tudo que você precisa para criar um portal moderno",
     "dragDrop": {
       "title": "Construção Drag & Drop",
-      "description": "Arraste e solte widgets para criar páginas dinâmicas em minutos."
+      "description": "Arraste e solte elementos para criar páginas dinâmicas em minutos. "
     },
     "customization": {
       "title": "Personalização Total",
@@ -32,7 +32,7 @@
     },
     "implementation": {
       "title": "Implementação Rápida",
-      "description": "Configure seu intranet em questão de horas, não meses."
+      "description": "Configure seu portal em questão de horas, não meses."
     },
     "modules": {
       "title": "Biblioteca de Módulos",
@@ -52,7 +52,7 @@
       "price": "R$ 359,00",
       "period": "por site",
       "description": "Para empresas que estão começando",
-      "features": ["Até 20 usuários, 1 admin e 1 admin de conteúdo", "Elementos estáticos", "Funcionalidades básicas"]
+      "features": ["Até 20 usuários, 1 administrador e 1 administrador de conteúdo", "Elementos estáticos", "Funcionalidades básicas"]
     },
     "growth": {
       "name": "Growth",
@@ -60,7 +60,7 @@
       "period": "por site",
       "description": "Para empresas em fase de expansão",
       "features": [
-        "De 21 até 50 usuários, 2 admins e 2 admins de conteúdo",
+        "De 21 até 50 usuários, 2 administradores e 2 administradores de conteúdo",
         "Elementos estáticos e dinâmicos - Em breve",
         "Funcionalidades avançadas - Em breve"
       ]
@@ -70,7 +70,11 @@
       "price": "R$ 1.499,00",
       "period": "por site",
       "description": "Para grandes empresas com recursos avançados",
-      "features": ["De 50 a 100 usuários, 2 admins e 2 admins de conteúdo", "Workflows - Em breve", "+ Funcionalidades avançadas - Em breve"]
+      "features": [
+        "De 50 a 100 usuários, 2 administradores e 2 administradores de conteúdo",
+        "Workflows - Em breve",
+        "+ Funcionalidades avançadas - Em breve"
+      ]
     },
     "enterprise": {
       "name": "Enterprise",

@@ -16,7 +16,7 @@
     "title": "Everything you need to create a modern portal",
     "dragDrop": {
       "title": "Drag & Drop Building",
-      "description": "Drag and drop widgets to create dynamic pages in minutes."
+      "description": "Drag and drop elements to create dynamic pages in minutes."
     },
     "customization": {
       "title": "Total Customization",
@@ -32,7 +32,7 @@
     },
     "implementation": {
       "title": "Quick Implementation",
-      "description": "Set up your intranet in hours, not months."
+      "description": "Set up your portal in hours, not months."
     },
     "modules": {
       "title": "Module Library",
@@ -52,7 +52,7 @@
       "price": "R$ 359,00",
       "period": "per site",
       "description": "For companies that are just starting",
-      "features": ["Up to 20 users, 1 admin and 1 content admin", "Static elements", "Basic features"]
+      "features": ["Up to 20 users, 1 administrator and 1 content administrator", "Static elements", "Basic features"]
     },
     "growth": {
       "name": "Growth",
@@ -60,7 +60,7 @@
       "period": "per site",
       "description": "For companies in expansion phase",
       "features": [
-        "From 21 to 50 users, 2 admins and 2 content admins",
+        "From 21 to 50 users, 2 administrators and 2 content administrators",
         "Static and dynamic elements - Coming soon",
         "Advanced features - Coming soon"
       ]
@@ -70,7 +70,7 @@
       "price": "R$ 1.499,00",
       "period": "per site",
       "description": "For large companies with advanced resources",
-      "features": ["From 51 to 100 users, unlimited admins", "Workflows - Coming soon", "+ Advanced features - Coming soon"]
+      "features": ["From 51 to 100 users, unlimited administrators", "Workflows - Coming soon", "+ Advanced features - Coming soon"]
     },
     "enterprise": {
       "name": "Enterprise",

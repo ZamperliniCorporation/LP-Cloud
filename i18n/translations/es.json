@@ -16,7 +16,7 @@
     "title": "Todo lo que necesitas para crear un portal moderno",
     "dragDrop": {
       "title": "Construcción Drag & Drop",
-      "description": "Arrastra y suelta widgets para crear páginas dinámicas en minutos."
+      "description": "Arrastra y suelta elementos para crear páginas dinámicas en minutos."
     },
     "customization": {
       "title": "Personalización Total",
@@ -32,7 +32,7 @@
     },
     "implementation": {
       "title": "Implementación Rápida",
-      "description": "Configura tu intranet en horas, no en meses."
+      "description": "Configura tu portal en horas, no en meses."
     },
     "modules": {
       "title": "Biblioteca de Módulos",
@@ -52,7 +52,7 @@
       "price": "R$ 359,00",
       "period": "por sitio",
       "description": "Para empresas que están comenzando",
-      "features": ["Hasta 20 usuarios, 1 admin y 1 admin de contenido", "Elementos estáticos", "Funcionalidades básicas"]
+      "features": ["Hasta 20 usuarios, 1 administrador y 1 administrador de contenido", "Elementos estáticos", "Funcionalidades básicas"]
     },
     "growth": {
       "name": "Growth",
@@ -60,7 +60,7 @@
       "period": "por sitio",
       "description": "Para empresas en fase de expansión",
       "features": [
-        "De 21 a 50 usuarios, 2 admins y 2 admins de contenido",
+        "De 21 a 50 usuarios, 2 administradores y 2 administradores de contenido",
         "Elementos estáticos y dinámicos - Próximamente",
         "Funcionalidades avanzadas - Próximamente"
       ]
@@ -70,7 +70,7 @@
       "price": "R$ 1.499,00",
       "period": "por sitio",
       "description": "Para grandes empresas con recursos avanzados",
-      "features": ["De 51 a 100 usuarios, admins ilimitados", "Workflows - Próximamente", "+ Funcionalidades avanzadas - Próximamente"]
+      "features": ["De 51 a 100 usuarios, administradores ilimitados", "Workflows - Próximamente", "+ Funcionalidades avanzadas - Próximamente"]
     },
     "enterprise": {
       "name": "Enterprise",
