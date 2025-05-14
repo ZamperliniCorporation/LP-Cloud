@@ -70,7 +70,9 @@ export default function Header() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <LanguageSwitcher />
+            {/* Dark mode temporarily disabled
             <ThemeToggle />
+            */}
             <button
               onClick={() => {
                 setIsDialogOpen(true);
@@ -85,7 +87,9 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
             <LanguageSwitcher />
+            {/* Dark mode temporarily disabled
             <ThemeToggle />
+            */}
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"} className="p-2">
               {isMenuOpen ? <X className="h-6 w-6 dark:text-white" /> : <Menu className="h-6 w-6 dark:text-white" />}
             </button>
