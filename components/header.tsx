@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/i18n/language-context";
@@ -15,6 +16,15 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const { t } = useLanguage();
+  const pathname = usePathname();
+
+  // Check if we're on the templates page
+  const isTemplatesPage = pathname?.includes("/modelos");
+
+  // Function to get the correct href for navigation links
+  const getNavHref = (anchor: string) => {
+    return isTemplatesPage ? `/${anchor}` : anchor;
+  };
 
   return (
     <>
@@ -43,19 +53,19 @@ export default function Header() {
                 {t("header.home")}
               </Link>
               <Link
-                href="#recursos"
+                href={getNavHref("#recursos")}
                 className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors"
               >
                 {t("header.resources")}
               </Link>
               <Link
-                href="#preco"
+                href={getNavHref("#preco")}
                 className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors"
               >
                 {t("header.pricing")}
               </Link>
               <Link
-                href="#contato"
+                href={getNavHref("#contato")}
                 className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors"
               >
                 {t("header.contact")}
@@ -69,7 +79,7 @@ export default function Header() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
             {/* Dark mode temporarily disabled
             <ThemeToggle />
             */}
@@ -86,7 +96,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
             {/* Dark mode temporarily disabled
             <ThemeToggle />
             */}
@@ -114,21 +124,21 @@ export default function Header() {
                 {t("header.home")}
               </Link>
               <Link
-                href="#recursos"
+                href={getNavHref("#recursos")}
                 className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t("header.resources")}
               </Link>
               <Link
-                href="#preco"
+                href={getNavHref("#preco")}
                 className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t("header.pricing")}
               </Link>
               <Link
-                href="#contato"
+                href={getNavHref("#contato")}
                 className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >

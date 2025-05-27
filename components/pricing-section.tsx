@@ -32,8 +32,8 @@ export default function PricingSection() {
       description: t("pricing.growth.description"),
       features: [
         { label: t("pricing.growth.features.0"), type: "check" },
-        { label: t("pricing.growth.features.1"), type: "clock" },
-        { label: t("pricing.growth.features.2"), type: "clock" },
+        { label: t("pricing.growth.features.1"), type: "check" },
+        { label: t("pricing.growth.features.2"), type: "check" },
       ],
       buttonColor: "bg-gradient-to-r from-[#F6A623] to-[#F2994A] text-white",
       cardColor: "bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 border border-gray-100 dark:border-gray-700",
@@ -45,8 +45,8 @@ export default function PricingSection() {
       description: t("pricing.business.description"),
       features: [
         { label: t("pricing.business.features.0"), type: "check" },
-        { label: t("pricing.business.features.1"), type: "clock" },
-        { label: t("pricing.business.features.2"), type: "clock" },
+        { label: t("pricing.business.features.1"), type: "check" },
+        { label: t("pricing.business.features.2"), type: "check" },
       ],
       buttonColor: "bg-gradient-to-r from-[#F6A623] to-[#F2994A] text-white",
       cardColor: "bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 border border-gray-100 dark:border-gray-700",
@@ -94,8 +94,7 @@ export default function PricingSection() {
                     plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"
                   } font-semibold text-lg mb-1 opacity-80 flex items-center gap-2`}
                 >
-                  <span className={`${plan.name === "Enterprise" ? "" : "blur-sm select-none"}`}>{plan.price}</span>{" "}
-                  <span className="font-normal text-base opacity-70">{plan.period}</span>
+                  <span>{plan.price}</span> <span className="font-normal text-base opacity-70">{plan.period}</span>
                 </div>
                 <div className={`${plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"} mb-2 opacity-80 text-base`}>
                   {plan.description}

@@ -7,15 +7,15 @@
     "earlyAccess": "Quero Acesso Antecipado"
   },
   "hero": {
-    "title": "O primeiro portal corporativo no-code do Brasil",
-    "subtitle": "Crie experiências únicas para seus profissionais sem precisar de conhecimentos técnicos.",
+    "title": "A maneira mais inteligente de criar sua intranet",
+    "subtitle": "Crie experiências únicas para sua equipe. Simples, rápido, sem barreiras.",
     "cta": "Quero Acesso Antecipado",
     "scrollText": "Role para ver mais"
   },
   "features": {
-    "title": "Tudo que você precisa para criar um portal moderno",
+    "title": "Tudo que você precisa para criar uma intranet moderna",
     "dragDrop": {
-      "title": "Criação simples e intuitiva",
+      "title": "Construção Fácil",
       "description": "Arraste e solte elementos para criar páginas dinâmicas em minutos. "
     },
     "customization": {
@@ -35,14 +35,39 @@
       "description": "Configure seu portal em questão de horas, não meses."
     },
     "modules": {
-      "title": "Biblioteca de Módulos",
-      "description": "Componentes prontos, ideais para cada necessidade e propósito do seu portal."
+      "title": "Biblioteca de Modelos",
+      "description": "Comece com modelos ideais para cada necessidade e personalize do seu jeito."
+    }
+  },
+  "quickProcess": {
+    "title": "Veja como é rápido",
+    "steps": {
+      "createSpace": {
+        "title": "Crie seu espaço",
+        "description": "Configure seu ambiente de trabalho personalizado"
+      },
+      "accessGroups": {
+        "title": "Crie grupos de acesso",
+        "description": "Defina permissões e organize sua equipe"
+      },
+      "customizeIntranet": {
+        "title": "Comece a personalizar sua intranet",
+        "description": "Use nosso editor drag & drop para criar páginas incríveis"
+      },
+      "publish": {
+        "title": "Publique",
+        "description": "Torne seu conteúdo visível para toda a equipe"
+      },
+      "inviteUsers": {
+        "title": "Convide os usuários",
+        "description": "Adicione sua equipe e comece a colaborar"
+      }
     }
   },
   "flexibility": {
     "title": "Liberdade para criar seu site do seu jeito",
     "subtitle": "Comece a partir do que sua empresa precisa.",
-    "categories": ["Franquias", "Comunicação", "Projetos", "Departamentos", "Processos"],
+    "categories": ["Portal do Cliente", "Portal do Fornecedor", "Portal do Funcionário", "Intranet", "Obras", "Franquias"],
     "cta": "Quero Acesso Antecipado"
   },
   "pricing": {
@@ -61,8 +86,9 @@
       "description": "Para empresas em fase de expansão",
       "features": [
         "De 21 até 50 usuários, 2 administradores e 2 administradores de conteúdo",
-        "Elementos estáticos e dinâmicos - Em breve",
-        "Funcionalidades avançadas - Em breve"
+        "Elementos estáticos e dinâmicos ",
+        "Rede Social",
+        "Gamificação"
       ]
     },
     "business": {
@@ -72,8 +98,9 @@
       "description": "Para grandes empresas com recursos avançados",
       "features": [
         "De 50 a 100 usuários, 2 administradores e 2 administradores de conteúdo",
-        "Workflows - Em breve",
-        "+ Funcionalidades avançadas - Em breve"
+        "Workflows",
+        "Relatórios Personalizados",
+        "Integrações com outras plataformas"
       ]
     },
     "enterprise": {

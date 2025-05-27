@@ -24,26 +24,16 @@ export default function HeroSection() {
 
   return (
     <>
-      <section ref={ref} className="relative hywork-banner-bg py-16 md:py-24 overflow-hidden min-h-[90vh] flex items-center">
-        <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="relative hidden md:block md:absolute right-0 bottom-0"
-        >
-          <motion.div style={{ opacity, y }}>
-            <Image
-              src="./hero.png"
-              alt="HyWork Platform Interface"
-              width={1920}
-              height={1080}
-              className="rounded-tl-3xl shadow-xl w-[500px] h-[400px] xl:w-[600px] xl:h-[500px]"
-            />
-          </motion.div>
-        </motion.div>
+      <section ref={ref} className="relative overflow-hidden min-h-[90vh] flex items-center">
+        {/* Background com duas cores */}
+        <div className="absolute inset-0 z-0">
+          <div className="h-2/3 hywork-banner-bg"></div>
+          <div className="h-1/3 bg-white dark:bg-gray-900"></div>
+        </div>
         <motion.div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10" style={{ opacity, y }}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <motion.div className="text-white" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+          <div className="flex flex-col items-center text-center">
+            {/* Texto centralizado */}
+            <motion.div className="text-white mt-20 mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
               <Typewriter
                 text={t("hero.title") as string}
                 speed={40}
@@ -51,7 +41,7 @@ export default function HeroSection() {
                 className="inline-block text-3xl md:text-4xl lg:text-5xl font-medium mb-6 tracking-wide"
               />
               <motion.p
-                className="text-lg mb-8 tracking-widest font-light"
+                className="text-lg mb-8 tracking-widest font-extralight max-w-2xl mx-auto"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.5, duration: 1 }}
@@ -77,14 +67,15 @@ export default function HeroSection() {
               </motion.div>
             </motion.div>
 
+            {/* Imagem na intersecção das cores */}
             <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
-              className="relative block md:hidden"
+              className="relative w-full max-w-6xl"
             >
               <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 1.2 }}>
-                <Image src="./hero.png" alt="HyWork Platform Interface" width={600} height={400} className="rounded-lg shadow-xl" />
+                <Image src="/gif.gif" alt="HyWork Platform Interface" width={1920} height={1080} className="rounded-lg shadow-xl w-full h-auto" />
               </motion.div>
             </motion.div>
           </div>
