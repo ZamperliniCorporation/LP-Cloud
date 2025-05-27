@@ -18,35 +18,35 @@ const processSteps: ProcessStep[] = [
     id: "create-space",
     title: "Crie seu espaço",
     description: "Configure seu ambiente de trabalho personalizado",
-    image: "/placeholder.svg?height=500&width=800&query=create workspace interface",
+    image: "/E1.png",
     isActive: false,
   },
   {
     id: "access-groups",
     title: "Crie grupos de acesso",
     description: "Defina permissões e organize sua equipe",
-    image: "/placeholder.svg?height=500&width=800&query=access groups management interface",
+    image: "/E2.png",
     isActive: false,
   },
   {
     id: "customize-intranet",
     title: "Comece a personalizar sua intranet",
     description: "Use nosso editor drag & drop para criar páginas incríveis",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Landing_Page_Cloud-jB1ceyN8npfbvhaqzWwT9D1ho9goWC.png",
+    image: "/E3.png",
     isActive: true,
   },
   {
     id: "publish",
     title: "Publique",
     description: "Torne seu conteúdo visível para toda a equipe",
-    image: "/placeholder.svg?height=500&width=800&query=publish content interface",
+    image: "/E4.png",
     isActive: false,
   },
   {
     id: "invite-users",
     title: "Convide os usuários",
     description: "Adicione sua equipe e comece a colaborar",
-    image: "/placeholder.svg?height=500&width=800&query=invite users interface",
+    image: "/E5.png",
     isActive: false,
   },
 ];
@@ -78,8 +78,8 @@ export default function QuickProcessSection() {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden min-h-[800px]">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20">
+    <section className="py-20 bg-[#F8F9FA] dark:bg-gray-900 relative overflow-hidden min-h-[800px]">
+      <div className=" mx-auto px-6 md:px-12 lg:px-20">
         {/* Title */}
         <motion.div
           className="text-center mb-16"
@@ -91,14 +91,14 @@ export default function QuickProcessSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-hywork-blue dark:text-white">Veja como é rápido</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
           {/* Left Side - Vertical Carousel */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-6 lg:col-span-1"
           >
             {steps.map((step, index) => (
               <motion.div
@@ -163,9 +163,9 @@ export default function QuickProcessSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative lg:col-span-2"
           >
-            <div className="relative h-[600px]">
+            <div className="relative h-[700px]">
               <AnimatePresence initial={false}>
                 <motion.div
                   key={activeStep}
@@ -178,23 +178,23 @@ export default function QuickProcessSection() {
                   }}
                   className="absolute inset-0 w-full"
                 >
-                  <div className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 shadow-2xl">
+                  <div className="h-full">
                     <Image
                       src={steps[activeStep].image || "/placeholder.svg"}
                       alt={steps[activeStep].title}
-                      width={800}
-                      height={500}
-                      className="w-full object-cover rounded-lg shadow-lg"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-full object-scale-down"
                       priority={activeStep === 2}
                     />
                   </div>
 
                   {/* Floating Elements for Visual Enhancement */}
                   <motion.div
-                    className="absolute -top-4 -right-4"
+                    className="absolute top-5 right-2"
                     animate={{
-                      y: [0, 15, 0],
-                      x: [0, 10, 0],
+                      y: [0, 25, 0],
+                      x: [0, 20, 0],
                     }}
                     transition={{
                       duration: 4,
@@ -202,21 +202,22 @@ export default function QuickProcessSection() {
                       ease: "easeInOut",
                     }}
                   >
-                    <Image src="/Vector.png" alt="Vector decoration" width={38} height={38} className="" />
+                    <Image src="/Vector.png" alt="Vector decoration" width={56} height={56} className="opacity-70" />
                   </motion.div>
                   <motion.div
-                    className="absolute -bottom-6 -left-6"
+                    className="absolute bottom-1 left-2"
                     animate={{
-                      y: [0, 15, 0],
-                      x: [0, 10, 0],
+                      y: [0, 25, 0],
+                      x: [0, 20, 0],
                     }}
                     transition={{
                       duration: 4,
                       repeat: Number.POSITIVE_INFINITY,
                       ease: "easeInOut",
+                      delay: 2,
                     }}
                   >
-                    <Image src="/Vector2.png" alt="Vector decoration" width={48} height={48} className="" />
+                    <Image src="/Vector2.png" alt="Vector decoration" width={66} height={66} className="opacity-50" />
                   </motion.div>
                 </motion.div>
               </AnimatePresence>
