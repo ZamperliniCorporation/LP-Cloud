@@ -118,12 +118,12 @@ export default function ReadyTemplatesSection() {
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <Link
+          {/* <Link
             href="/modelos"
             className="bg-hywork-orange hover:bg-hywork-orange-dark text-white font-medium py-4 px-8 rounded-lg text-lg transition-all transform hover:scale-105"
           >
             Ver Todos os Modelos
-          </Link>
+          </Link> */}
         </motion.div>
       </div>
     </section>

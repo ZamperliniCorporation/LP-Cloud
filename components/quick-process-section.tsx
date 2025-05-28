@@ -165,7 +165,7 @@ export default function QuickProcessSection() {
             viewport={{ once: true }}
             className="relative lg:col-span-2"
           >
-            <div className="relative h-[700px]">
+            <div className="relative h-[200px] md:h-[700px]">
               <AnimatePresence initial={false}>
                 <motion.div
                   key={activeStep}
@@ -191,7 +191,7 @@ export default function QuickProcessSection() {
 
                   {/* Floating Elements for Visual Enhancement */}
                   <motion.div
-                    className="absolute top-5 right-2"
+                    className="hidden sm:absolute top-5 right-2"
                     animate={{
                       y: [0, 25, 0],
                       x: [0, 20, 0],
@@ -205,7 +205,7 @@ export default function QuickProcessSection() {
                     <Image src="/Vector.png" alt="Vector decoration" width={56} height={56} className="opacity-70" />
                   </motion.div>
                   <motion.div
-                    className="absolute bottom-1 left-2"
+                    className="hidden sm:absolute bottom-1 left-2"
                     animate={{
                       y: [0, 25, 0],
                       x: [0, 20, 0],

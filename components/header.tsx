@@ -40,41 +40,33 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <motion.nav
-            className="hidden md:flex items-center justify-center flex-1 mx-4"
+            className="hidden md:flex items-center space-x-8 ml-12"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className="flex items-center space-x-8">
-              <Link
-                href="/"
-                className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors"
-              >
-                {t("header.home")}
-              </Link>
-              <Link
-                href={getNavHref("#recursos")}
-                className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors"
-              >
-                {t("header.resources")}
-              </Link>
-              <Link
-                href={getNavHref("#preco")}
-                className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors"
-              >
-                {t("header.pricing")}
-              </Link>
-              <Link
-                href={getNavHref("#contato")}
-                className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors"
-              >
-                {t("header.contact")}
-              </Link>
-            </div>
+            <Link
+              href={getNavHref("#recursos")}
+              className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors"
+            >
+              {t("header.resources")}
+            </Link>
+            <Link
+              href={getNavHref("#preco")}
+              className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors"
+            >
+              {t("header.pricing")}
+            </Link>
+            <Link
+              href={getNavHref("#contato")}
+              className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors"
+            >
+              {t("header.contact")}
+            </Link>
           </motion.nav>
 
           <motion.div
-            className="hidden md:flex items-center gap-4"
+            className="hidden md:flex items-center gap-4 ml-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -116,13 +108,6 @@ export default function Header() {
             transition={{ duration: 0.3 }}
           >
             <div className="flex flex-col p-4 space-y-4">
-              <Link
-                href="/"
-                className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t("header.home")}
-              </Link>
               <Link
                 href={getNavHref("#recursos")}
                 className="text-hywork-blue dark:text-blue-300 font-medium hover:text-hywork-blue-light dark:hover:text-blue-200 transition-colors py-2"
