@@ -74,7 +74,7 @@ export default function ReadyTemplatesSection() {
 
   return (
     <section className="py-20 bg-[#FDF7F2] dark:bg-gray-800 relative">
-      <div className="mx-auto px-6 md:px-12 lg:px-16">
+      <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-16 max-w-7xl">
         {/* Title */}
         <motion.div
           className="text-center mb-16"
@@ -83,20 +83,20 @@ export default function ReadyTemplatesSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Inicie com modelos prontos para acelerar seu sucesso
           </h2>
         </motion.div>
 
         {/* Templates Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
           {/* Large Template - Spans 2 columns */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-2 lg:row-span-2"
+            className="sm:col-span-2 lg:col-span-2 lg:row-span-2"
           >
             <TemplateCard template={templates[0]} isLarge={true} />
           </motion.div>
@@ -109,6 +109,7 @@ export default function ReadyTemplatesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: (index + 1) * 0.1 }}
               viewport={{ once: true }}
+              className="sm:col-span-1"
             >
               <TemplateCard template={template} isLarge={false} />
             </motion.div>
@@ -144,22 +145,28 @@ function TemplateCard({ template, isLarge }: TemplateCardProps) {
   return (
     <motion.div
       className={`relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
-        isLarge ? "h-[500px] lg:h-full" : "h-72"
+        isLarge ? "h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-full" : "h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80"
       }`}
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
     >
       {/* Template Preview Image */}
       <motion.div className="relative w-full h-full" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
-        <Image src={template.image || "/placeholder.svg"} alt={template.title} fill className="object-contain rounded-2xl" />
+        <Image
+          src={template.image || "/placeholder.svg"}
+          alt={template.title}
+          fill
+          className="object-cover rounded-2xl"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        />
       </motion.div>
 
       {/* Hover Overlay - Partial section */}
-      <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-4 opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-        <div className="text-white text-center space-y-2">
-          <span className="inline-block bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium">{template.category}</span>
-          <h3 className="text-lg font-bold">{template.title}</h3>
-          <p className="text-white/90 text-sm">{template.description}</p>
+      <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-3 sm:p-4 opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+        <div className="text-white text-center space-y-1 sm:space-y-2">
+          <span className="inline-block bg-white/20 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">{template.category}</span>
+          <h3 className="text-sm sm:text-base lg:text-lg font-bold">{template.title}</h3>
+          <p className="text-white/90 text-xs sm:text-sm hidden sm:block">{template.description}</p>
         </div>
       </div>
     </motion.div>
