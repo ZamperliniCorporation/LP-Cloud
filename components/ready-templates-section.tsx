@@ -19,17 +19,19 @@ interface Template {
 const templates: Template[] = [
   {
     id: "campanhas-main",
-    title: "Campanhas",
-    description: "Engaje seu time com campanhas internas",
+    title: "Formulário de Ideias",
+    description:
+      "Espaço colaborativo para envio de sugestões, propostas de melhorias ou novas iniciativas. Incentive a participação ativa de todos na construção de um ambiente mais inovador e eficiente.",
     image: "/H1.png",
     backgroundColor: "bg-purple-200",
     size: "large",
-    category: "Campanhas",
+    category: "Processos",
   },
   {
     id: "profissionais",
-    title: "Profissionais",
-    description: "Gerencie perfis e informações da equipe",
+    title: "Perfil Profissional",
+    description:
+      "Modelo para apresentar a trajetória, competências e projetos de cada colaborador. Fortalece a visibilidade interna e facilita conexões estratégicas entre as equipes.Modelo para apresentar a trajetória, competências e projetos de cada colaborador. Fortalece a visibilidade interna e facilita conexões estratégicas entre as equipes.",
     image: "/H2.png",
     backgroundColor: "bg-orange-200",
     size: "medium",
@@ -37,30 +39,33 @@ const templates: Template[] = [
   },
   {
     id: "campanhas-2",
-    title: "Campanhas",
-    description: "Crie campanhas envolventes e impactantes",
+    title: "Projetos com Kanban",
+    description:
+      "Visualize e gerencie os fluxos de trabalho com o método Kanban. Acompanhe o andamento dos projetos, distribua tarefas e facilite a colaboração entre as equipes de forma organizada e transparente.",
     image: "/H3.png",
     backgroundColor: "bg-blue-200",
     size: "medium",
-    category: "Campanhas",
+    category: "Processos",
   },
   {
     id: "bem-vindo",
-    title: "Página Inicial",
-    description: "Crie uma página de boas-vindas acolhedora",
+    title: "Campanhas",
+    description:
+      "Centralize todas as campanhas internas: comunicados, ações de engajamento, conscientização e celebrações. Mantenha todos informados e alinhados com as iniciativas da organização",
     image: "/H4.png",
     backgroundColor: "bg-pink-200",
     size: "medium",
-    category: "Página Inicial",
+    category: "Conteúdos",
   },
   {
     id: "formularios",
-    title: "Formulários",
-    description: "Colete informações de forma organizada",
+    title: "Galeria de Fotos",
+    description:
+      "Reúna e compartilhe os melhores momentos da equipe: eventos, conquistas e celebrações. Um espaço para valorizar a cultura organizacional e fortalecer o sentimento de pertencimento.",
     image: "/H5.png",
     backgroundColor: "bg-green-200",
     size: "medium",
-    category: "Formulários",
+    category: "Conteúdos",
   },
 ];
 
@@ -69,7 +74,7 @@ export default function ReadyTemplatesSection() {
 
   return (
     <section className="py-20 bg-[#FDF7F2] dark:bg-gray-800 relative">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20">
+      <div className="mx-auto px-6 md:px-12 lg:px-16">
         {/* Title */}
         <motion.div
           className="text-center mb-16"
@@ -84,7 +89,7 @@ export default function ReadyTemplatesSection() {
         </motion.div>
 
         {/* Templates Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Large Template - Spans 2 columns */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -139,26 +144,15 @@ function TemplateCard({ template, isLarge }: TemplateCardProps) {
   return (
     <motion.div
       className={`relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
-        isLarge ? "h-96 lg:h-full" : "h-64"
+        isLarge ? "h-[500px] lg:h-full" : "h-72"
       }`}
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
     >
-      {/* Background Color */}
-      <div className={`absolute inset-0 ${template.backgroundColor}`} />
-
-      {/* Template Preview Image - Connected to bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-full flex items-end justify-center px-4">
-        <motion.div className="relative w-full max-w-md" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
-          <Image
-            src={template.image || "/placeholder.svg"}
-            alt={template.title}
-            width={isLarge ? 600 : 400}
-            height={isLarge ? 400 : 300}
-            className="w-full h-auto rounded-t-lg"
-          />
-        </motion.div>
-      </div>
+      {/* Template Preview Image */}
+      <motion.div className="relative w-full h-full" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
+        <Image src={template.image || "/placeholder.svg"} alt={template.title} fill className="object-fill rounded-2xl" />
+      </motion.div>
 
       {/* Hover Overlay - Partial section */}
       <div className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-sm p-4 opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out">
