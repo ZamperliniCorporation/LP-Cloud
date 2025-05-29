@@ -8,7 +8,7 @@ import GoogleTagManager from "@/components/GoogleTagManager";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "HyWork Cloud - O primeiro portal corporativo no-code do Brasil",
+  title: "HyWork Cloud - A maneira mais inteligente de criar sua intranet",
   description: "Crie experiências únicas para seus profissionais sem precisar de conhecimentos técnicos.",
 };
 
