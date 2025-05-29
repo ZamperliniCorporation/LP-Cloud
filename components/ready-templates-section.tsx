@@ -151,7 +151,7 @@ function TemplateCard({ template, isLarge }: TemplateCardProps) {
     >
       {/* Template Preview Image */}
       <motion.div className="relative w-full h-full" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
-        <Image src={template.image || "/placeholder.svg"} alt={template.title} fill className="object-fill rounded-2xl" />
+        <Image src={template.image || "/placeholder.svg"} alt={template.title} fill className="object-contain rounded-2xl" />
       </motion.div>
 
       {/* Hover Overlay - Partial section */}
@@ -160,9 +160,6 @@ function TemplateCard({ template, isLarge }: TemplateCardProps) {
           <span className="inline-block bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium">{template.category}</span>
           <h3 className="text-lg font-bold">{template.title}</h3>
           <p className="text-white/90 text-sm">{template.description}</p>
-          <button className="bg-hywork-orange hover:bg-hywork-orange-dark text-white font-medium py-1.5 px-4 rounded-lg transition-all transform hover:scale-105 text-sm mt-2">
-            Ver Modelo
-          </button>
         </div>
       </div>
     </motion.div>
