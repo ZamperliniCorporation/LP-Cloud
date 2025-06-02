@@ -75,7 +75,7 @@
     "startup": {
       "name": "Startup",
       "price": "R$ 359,00",
-      "period": "por site",
+      "period": "p/ site",
       "description": "Para empresas que estão começando",
       "features": ["Até 20 usuários, 1 administrador e 1 administrador de conteúdo", "Elementos estáticos", "Funcionalidades básicas"]
     },
