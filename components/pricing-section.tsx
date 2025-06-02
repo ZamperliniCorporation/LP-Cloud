@@ -91,7 +91,7 @@ export default function PricingSection() {
                 </h3>
                 <div
                   className={`${plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"} font-semibold ${
-                    plan.name === "Enterprise" ? "text-base" : "text-lg"
+                    plan.name === "Enterprise" ? "text-base" : plan.name === t("pricing.business.name") ? "text-base" : "text-lg"
                   } mb-1 opacity-80 ${plan.name === "Enterprise" ? "flex-col items-start" : "flex items-center gap-2"}`}
                 >
                   {plan.name !== "Enterprise" && <span className="text-sm font-normal opacity-70">A partir de</span>}
