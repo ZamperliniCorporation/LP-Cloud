@@ -83,25 +83,21 @@ export default function PricingSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true, amount: 0.1 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className={`flex flex-col justify-between rounded-2xl shadow-lg border-0 p-6 min-h-[410px] ${plan.cardColor}`}
+              className={`flex flex-col justify-between rounded-2xl shadow-lg border-0 p-6 min-h-[460px] ${plan.cardColor}`}
             >
               <div>
-                <h3 className={`text-2xl font-bold mb-1 ${plan.name === "Enterprise" ? "text-white" : "text-gray-900 dark:text-white"}`}>
+                <h3 className={`text-2xl font-bold mb-2 ${plan.name === "Enterprise" ? "text-white" : "text-gray-900 dark:text-white"}`}>
                   {plan.name}
                 </h3>
-                <div
-                  className={`${plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"} font-semibold ${
-                    plan.name === "Enterprise" ? "text-base" : plan.name === t("pricing.business.name") ? "text-base" : "text-lg"
-                  } mb-1 opacity-80 ${plan.name === "Enterprise" ? "flex-col items-start" : "flex items-center gap-2"}`}
-                >
-                  {plan.name !== "Enterprise" && <span className="text-sm font-normal opacity-70">A partir de</span>}
-                  <span className={plan.name === "Enterprise" ? "leading-tight" : ""}>{plan.price}</span>
-                  {plan.period && <span className="font-normal text-base opacity-70">{plan.period}</span>}
+                <div className={`mb-3 ${plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"}`}>
+                  {plan.name !== "Enterprise" && <div className="text-xs font-normal opacity-70 mb-1">A partir de</div>}
+                  <div className={`font-semibold ${plan.name === "Enterprise" ? "text-sm leading-tight" : "text-lg"} mb-1`}>{plan.price}</div>
+                  {plan.period && <div className="font-normal text-xs opacity-70 leading-tight">{plan.period}</div>}
                 </div>
-                <div className={`${plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"} mb-2 opacity-80 text-base`}>
+                <div className={`${plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"} mb-4 opacity-80 text-sm`}>
                   {plan.description}
                 </div>
-                <ul className={`space-y-2 mt-4 mb-8 ${plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"}`}>
+                <ul className={`space-y-2 mt-4 mb-6 ${plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"}`}>
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-sm">
                       {feature.type === "check" ? (

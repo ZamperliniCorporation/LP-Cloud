@@ -75,14 +75,14 @@
     "startup": {
       "name": "Startup",
       "price": "R$ 359,00",
-      "period": "por mês",
+      "period": "por mês para cada site",
       "description": "Para empresas que estão começando",
       "features": ["Até 20 usuários, 1 administrador e 1 administrador de conteúdo", "Elementos estáticos", "Funcionalidades básicas"]
     },
     "growth": {
       "name": "Growth",
       "price": "R$ 759,00",
-      "period": "por mês",
+      "period": "por mês para cada site",
       "description": "Para empresas em fase de expansão",
       "features": [
         "De 21 até 50 usuários, 2 administradores e 2 administradores de conteúdo",
@@ -94,7 +94,7 @@
     "business": {
       "name": "Business",
       "price": "R$ 1.499,00",
-      "period": "por mês",
+      "period": "por mês para cada site",
       "description": "Para grandes empresas com recursos avançados",
       "features": [
         "De 50 a 100 usuários, 2 administradores e 2 administradores de conteúdo",
@@ -106,7 +106,7 @@
     "enterprise": {
       "name": "Enterprise",
       "price": "Empresas com demandas avançadas de personalização",
-      "period": "",
+      "period": "por mês para cada site",
       "description": "",
       "features": ["Personalização de acordo com as necessidades"]
     }
