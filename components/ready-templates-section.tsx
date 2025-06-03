@@ -23,7 +23,7 @@ const templates: Template[] = [
     description:
       "Espaço colaborativo para envio de sugestões, propostas de melhorias ou novas iniciativas. Incentive a participação ativa de todos na construção de um ambiente mais inovador e eficiente.",
     image: "/H1.png",
-    backgroundColor: "bg-purple-200",
+    backgroundColor: "#E78BFA",
     size: "large",
     category: "Processos",
   },
@@ -33,7 +33,7 @@ const templates: Template[] = [
     description:
       "Modelo para apresentar a trajetória, competências e projetos de cada colaborador. Fortalece a visibilidade interna e facilita conexões estratégicas entre as equipes.Modelo para apresentar a trajetória, competências e projetos de cada colaborador. Fortalece a visibilidade interna e facilita conexões estratégicas entre as equipes.",
     image: "/H2.png",
-    backgroundColor: "bg-orange-200",
+    backgroundColor: "#FDE3C8",
     size: "medium",
     category: "Profissionais",
   },
@@ -43,7 +43,7 @@ const templates: Template[] = [
     description:
       "Visualize e gerencie os fluxos de trabalho com o método Kanban. Acompanhe o andamento dos projetos, distribua tarefas e facilite a colaboração entre as equipes de forma organizada e transparente.",
     image: "/H3.png",
-    backgroundColor: "bg-blue-200",
+    backgroundColor: "#D3EAF5",
     size: "medium",
     category: "Processos",
   },
@@ -53,7 +53,7 @@ const templates: Template[] = [
     description:
       "Centralize todas as campanhas internas: comunicados, ações de engajamento, conscientização e celebrações. Mantenha todos informados e alinhados com as iniciativas da organização",
     image: "/H4.png",
-    backgroundColor: "bg-pink-200",
+    backgroundColor: "#FFC7D2",
     size: "medium",
     category: "Conteúdos",
   },
@@ -63,7 +63,7 @@ const templates: Template[] = [
     description:
       "Reúna e compartilhe os melhores momentos da equipe: eventos, conquistas e celebrações. Um espaço para valorizar a cultura organizacional e fortalecer o sentimento de pertencimento.",
     image: "/H5.png",
-    backgroundColor: "bg-green-200",
+    backgroundColor: "#D7F9DE",
     size: "medium",
     category: "Conteúdos",
   },
@@ -146,12 +146,19 @@ function TemplateCard({ template, isLarge }: TemplateCardProps) {
       className={`relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
         isLarge ? "h-64 md:h-80 lg:h-[500px] xl:h-full" : "h-48 md:h-64 lg:h-72"
       }`}
+      style={{ backgroundColor: template.backgroundColor }}
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
     >
       {/* Template Preview Image */}
       <motion.div className="relative w-full h-full" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
-        <Image src={template.image || "/placeholder.svg"} alt={template.title} fill className="object-cover rounded-2xl" />
+        <Image
+          src={template.image || "/placeholder.svg"}
+          alt={template.title}
+          fill
+          className="object-cover md:object-fill"
+          style={{ backgroundColor: "transparent" }}
+        />
       </motion.div>
 
       {/* Hover Overlay - Partial section */}

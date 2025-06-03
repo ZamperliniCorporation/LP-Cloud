@@ -1,36 +1,27 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { Typewriter } from "./ui/typewriter";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useLanguage } from "@/i18n/language-context";
 import ScrollDownIndicator from "./scroll-down-indicator";
 import { EarlyAccessDialog } from "./ui/early-access-dialog";
 import { trackEarlyAccessClick } from "@/lib/gtag";
 
 export default function HeroSection() {
-  const ref = useRef(null);
   const { t } = useLanguage();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
-
   return (
     <>
-      <section ref={ref} className="relative overflow-hidden min-h-[90vh] flex items-center">
+      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
         {/* Background com duas cores */}
         <div className="absolute inset-0 z-0">
           <div className="h-2/3 hywork-banner-bg"></div>
           <div className="h-1/3 bg-white dark:bg-gray-900"></div>
         </div>
-        <motion.div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10" style={{ opacity, y }}>
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
           <div className="flex flex-col items-center text-center">
             {/* Texto centralizado */}
             <motion.div className="text-white mt-20 mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
@@ -79,7 +70,7 @@ export default function HeroSection() {
               </motion.div>
             </motion.div>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       <EarlyAccessDialog isOpen={isDialogOpen} onClose={() => setIsDialogOpen(false)} />

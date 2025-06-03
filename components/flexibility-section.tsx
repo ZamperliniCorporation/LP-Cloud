@@ -13,7 +13,7 @@ export default function FlexibilitySection() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
-    <section className="py-40 bg-hywork-gray-lighter dark:bg-gray-800 relative ">
+    <section className="py-20 lg:py-40 bg-hywork-gray-lighter dark:bg-gray-800 relative ">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div

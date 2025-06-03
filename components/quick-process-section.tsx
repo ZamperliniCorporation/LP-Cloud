@@ -165,7 +165,7 @@ export default function QuickProcessSection() {
             viewport={{ once: true }}
             className="relative lg:col-span-2"
           >
-            <div className="relative h-[200px] md:h-[700px]">
+            <div className="relative h-[300px] md:h-[400px] lg:h-[600px]">
               <AnimatePresence initial={false}>
                 <motion.div
                   key={activeStep}
@@ -184,7 +184,7 @@ export default function QuickProcessSection() {
                       alt={steps[activeStep].title}
                       width={1920}
                       height={1080}
-                      className="w-full h-full object-scale-down"
+                      className="w-full h-full object-contain md:object-scale-down"
                       priority={activeStep === 2}
                     />
                   </div>
