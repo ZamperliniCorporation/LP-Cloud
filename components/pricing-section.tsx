@@ -117,7 +117,7 @@ export default function PricingSection() {
                   trackEarlyAccessClick(`pricing-${String(plan.name).toLowerCase()}`);
                 }}
               >
-                Quero Acesso Antecipado
+                Agendar Demonstração
               </button>
             </motion.div>
           ))}

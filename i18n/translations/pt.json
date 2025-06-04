@@ -4,12 +4,12 @@
     "resources": "Recursos",
     "pricing": "Preço",
     "contact": "Contato",
-    "earlyAccess": "Quero Acesso Antecipado"
+    "earlyAccess": "Agendar Demonstração"
   },
   "hero": {
     "title": "A maneira mais inteligente de criar sua intranet",
     "subtitle": "Crie experiências únicas para sua equipe. Simples, rápido, sem barreiras.",
-    "cta": "Quero Acesso Antecipado",
+    "cta": "Agendar Demonstração",
     "scrollText": "Role para ver mais"
   },
   "features": {
@@ -68,7 +68,7 @@
     "title": "Liberdade para o seu negócio",
     "subtitle": "Comece a partir do que sua empresa precisa.",
     "categories": ["Portal do Cliente", "Portal do Fornecedor", "Portal do Funcionário", "Intranet", "Obras", "Franquias"],
-    "cta": "Quero Acesso Antecipado"
+    "cta": "Agendar Demonstração"
   },
   "pricing": {
     "title": "Preço",
@@ -114,7 +114,7 @@
   "cta": {
     "title": "Pronto para transformar sua forma de comunicar?",
     "subtitle": "Crie, personalize e publique sem complicações. Experimente o Hywork Cloud e revolucione sua comunicação interna!",
-    "button": "Quero Acesso Antecipado"
+    "button": "Agendar Demonstração"
   },
   "footer": {
     "developedBy": "Desenvolvido por"
@@ -123,7 +123,7 @@
     "language": "Idioma"
   },
   "earlyAccess": {
-    "title": "Quero acesso antecipado",
+    "title": "Agendar Demonstração",
     "subtitle": "Preencha o formulário abaixo para garantir seu acesso antecipado à plataforma HyWork Cloud.",
     "form": {
       "name": "Nome completo",
