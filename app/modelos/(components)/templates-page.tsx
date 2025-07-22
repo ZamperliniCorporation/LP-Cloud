@@ -2,17 +2,14 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, ChevronDown, ArrowLeft } from "lucide-react";
+import { Search, ChevronDown } from "lucide-react";
 import { templates, useCases, models, type Template } from "./data/templates";
 import { TemplateCard } from "./template-card";
-import { TemplateDetail } from "./template-detail";
 import { useLanguage } from "@/i18n/language-context";
-import { Button } from "@/components/ui/button";
 import Header from "@/components/header";
 
 export default function TemplatesPage() {
   const { t } = useLanguage();
-  const [selectedTemplate, setSelectedTemplate] = useState<Template | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedUseCase, setSelectedUseCase] = useState("Tudo");
   const [selectedModel, setSelectedModel] = useState("");
@@ -21,24 +18,16 @@ export default function TemplatesPage() {
 
   const filteredTemplates = templates.filter((template) => {
     const matchesSearch =
-      template.title.toLowerCase().includes(searchQuery.toLowerCase()) || template.description.toLowerCase().includes(searchQuery.toLowerCase());
+      template.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      template.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesUseCase = selectedUseCase === "Tudo" || template.useCase === selectedUseCase;
     const matchesModel = !selectedModel || template.category === selectedModel;
 
     return matchesSearch && matchesUseCase && matchesModel;
   });
 
-  const handleTemplateClick = (template: Template) => {
-    setSelectedTemplate(template);
-  };
-
-  const handleBackClick = () => {
-    setSelectedTemplate(null);
-  };
-
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Header */}
       <Header />
 
       <motion.div
@@ -51,9 +40,8 @@ export default function TemplatesPage() {
           Inicie com modelos prontos para acelerar seu sucesso
         </h1>
       </motion.div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Title */}
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar */}
           <motion.div
@@ -150,45 +138,23 @@ export default function TemplatesPage() {
           </motion.div>
 
           {/* Main Content */}
-          <div className="flex-1">
-            <AnimatePresence mode="wait">
-              {selectedTemplate ? (
-                <motion.div
-                  key="detail"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <button onClick={handleBackClick} className="flex items-center text-[#104a74] hover:text-[#0a3b55] mb-6 transition-colors">
-                    <ArrowLeft className="h-4 w-4 mr-2" />
-                    Voltar
-                  </button>
-                  <TemplateDetail template={selectedTemplate} />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="grid"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-                >
-                  {filteredTemplates.map((template, index) => (
-                    <motion.div
-                      key={template.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                    >
-                      <TemplateCard template={template} onClick={() => handleTemplateClick(template)} />
-                    </motion.div>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-1"
+          >
+            {filteredTemplates.map((template, index) => (
+              <motion.div
+                key={template.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+              >
+                <TemplateCard template={template} />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </div>

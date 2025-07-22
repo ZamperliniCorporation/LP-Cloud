@@ -3,19 +3,18 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/language-context";
-import { EarlyAccessDialog } from "./ui/early-access-dialog";
 import { trackEarlyAccessClick } from "@/lib/gtag";
 import { useState } from "react";
 
 export default function FlexibilitySection() {
   const { t } = useLanguage();
   const categories = t("flexibility.categories") as string[];
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
-    <section className="py-20 lg:py-40 bg-hywork-gray-lighter dark:bg-gray-800 relative ">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl ">
+    <section className="py-20 lg:py-40 bg-hywork-gray-lighter dark:bg-gray-800 relative">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Imagem à esquerda */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -30,10 +29,17 @@ export default function FlexibilitySection() {
               }}
               transition={{ duration: 0.3 }}
             >
-              <Image src="./Noticias.png" alt="HyWork Platform Customization" width={600} height={500} className="rounded-lg shadow-xl" />
+              <Image
+                src="./Noticias.png"
+                alt="HyWork Platform Customization"
+                width={600}
+                height={500}
+                className="rounded-lg shadow-xl"
+              />
             </motion.div>
           </motion.div>
 
+          {/* Texto à direita */}
           <motion.div
             className="order-1 md:order-2"
             initial={{ opacity: 0, x: 50 }}
@@ -82,10 +88,7 @@ export default function FlexibilitySection() {
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{
-                    scale: 1.1,
-                    color: "white",
-                  }}
+                  whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <button className="px-4 py-2 text-sm bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 rounded-full transition-all">
@@ -95,6 +98,7 @@ export default function FlexibilitySection() {
               ))}
             </div>
 
+            {/* Botão direcionando para nova página de contato */}
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -103,20 +107,17 @@ export default function FlexibilitySection() {
               transition={{ duration: 0.5, delay: 0.8 }}
               viewport={{ once: true }}
             >
-              <button
-                className="bg-[#104a74] dark:bg-[#1a6ca0] text-primary-foreground font-medium py-2 px-6 rounded-md transition-all hover:bg-[#104a74]/90 dark:hover:bg-[#1a6ca0]/90"
-                onClick={() => {
-                  setIsDialogOpen(true);
-                  trackEarlyAccessClick("flexibility");
-                }}
+              <a
+                href="/contato"
+                className="inline-block bg-[#104a74] dark:bg-[#1a6ca0] text-white font-medium py-2 px-6 rounded-md transition-all hover:bg-[#104a74]/90 dark:hover:bg-[#1a6ca0]/90"
+                onClick={() => trackEarlyAccessClick("flexibility")}
               >
                 {t("flexibility.cta")}
-              </button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
       </div>
-      <EarlyAccessDialog isOpen={isDialogOpen} onClose={() => setIsDialogOpen(false)} forceLightMode />
     </section>
   );
 }

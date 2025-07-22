@@ -3,13 +3,10 @@
 import { motion } from "framer-motion";
 import { Check, Clock } from "lucide-react";
 import { useLanguage } from "@/i18n/language-context";
-import { trackEarlyAccessClick } from "@/lib/gtag";
-import { EarlyAccessDialog } from "./ui/early-access-dialog";
-import { useState } from "react";
+import Link from "next/link";
 
 export default function PricingSection() {
   const { t } = useLanguage();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const pricingPlans = [
     {
@@ -74,6 +71,7 @@ export default function PricingSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Preço</h2>
         </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {pricingPlans.map((plan, index) => (
             <motion.div
@@ -91,7 +89,9 @@ export default function PricingSection() {
                 </h3>
                 <div className={`mb-3 ${plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"}`}>
                   {plan.name !== "Enterprise" && <div className="text-xs font-normal opacity-70 mb-1">A partir de</div>}
-                  <div className={`font-semibold ${plan.name === "Enterprise" ? "text-sm leading-tight" : "text-lg"} mb-1`}>{plan.price}</div>
+                  <div className={`font-semibold ${plan.name === "Enterprise" ? "text-sm leading-tight" : "text-lg"} mb-1`}>
+                    {plan.price}
+                  </div>
                   {plan.period && <div className="font-normal text-xs opacity-70 leading-tight">{plan.period}</div>}
                 </div>
                 <div className={`${plan.name === "Enterprise" ? "text-white" : "text-gray-700 dark:text-gray-200"} mb-4 opacity-80 text-sm`}>
@@ -110,20 +110,18 @@ export default function PricingSection() {
                   ))}
                 </ul>
               </div>
-              <button
-                className={`w-full mt-auto py-2.5 rounded-lg font-semibold shadow-sm transition-all ${plan.buttonColor}`}
-                onClick={() => {
-                  setIsDialogOpen(true);
-                  trackEarlyAccessClick(`pricing-${String(plan.name).toLowerCase()}`);
-                }}
-              >
-                Agendar Demonstração
-              </button>
+
+              <Link href="/contato" className="w-full mt-auto">
+                <button
+                  className={`w-full py-2.5 rounded-lg font-semibold shadow-sm transition-all ${plan.buttonColor}`}
+                >
+                  Agendar Demonstração
+                </button>
+              </Link>
             </motion.div>
           ))}
         </div>
       </div>
-      <EarlyAccessDialog isOpen={isDialogOpen} onClose={() => setIsDialogOpen(false)} />
     </section>
   );
 }
